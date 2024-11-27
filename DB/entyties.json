@@ -4,7 +4,7 @@
       "user_id": 1,
       "name": "Harry Potter",
       "email": "harry.potter@hogwarts.com",
-      "role": "Buyer",
+      "roles": ["Buyer"],
       "house": "Gryffindor",
       "balance": 150,
       "magic_level": 7
@@ -13,7 +13,7 @@
       "user_id": 2,
       "name": "Draco Malfoy",
       "email": "draco.malfoy@hogwarts.com",
-      "role": "Seller",
+      "roles": ["Seller", "Buyer"],
       "house": "Slytherin",
       "balance": 200,
       "magic_level": 6
@@ -22,7 +22,7 @@
       "user_id": 3,
       "name": "Hermione Granger",
       "email": "hermione.granger@hogwarts.com",
-      "role": "Administrator",
+      "roles": ["Administrator"],
       "house": "Gryffindor",
       "balance": 500,
       "magic_level": 10
@@ -31,7 +31,7 @@
       "user_id": 4,
       "name": "Ron Weasley",
       "email": "ron.weasley@hogwarts.com",
-      "role": "Buyer",
+      "roles": ["Buyer", "Seller"],
       "house": "Gryffindor",
       "balance": 75,
       "magic_level": 5
@@ -40,7 +40,7 @@
       "user_id": 5,
       "name": "Severus Snape",
       "email": "severus.snape@hogwarts.com",
-      "role": "Seller",
+      "roles": ["Seller"],
       "house": "Slytherin",
       "balance": 300,
       "magic_level": 9
@@ -49,7 +49,7 @@
       "user_id": 6,
       "name": "Minerva McGonagall",
       "email": "minerva.mcgonagall@hogwarts.com",
-      "role": "Administrator",
+      "roles": ["Administrator"],
       "house": "Gryffindor",
       "balance": 600,
       "magic_level": 10
@@ -81,7 +81,7 @@
       "category": "Books",
       "price": 150,
       "approval_status": "Rejected",
-      "seller_id": 1
+      "seller_id": 4
     },
     {
       "item_id": 104,
@@ -108,28 +108,32 @@
       "buyer_id": 1,
       "seller_id": 2,
       "item_id": 102,
-      "amount": 300
+      "amount": 300,
+      "date": "2024-11-05"
     },
     {
       "transaction_id": 1002,
       "buyer_id": 1,
       "seller_id": 2,
       "item_id": 103,
-      "amount": 150
+      "amount": 150,
+      "date": "2024-11-15"
     },
     {
       "transaction_id": 1003,
       "buyer_id": 4,
       "seller_id": 5,
       "item_id": 104,
-      "amount": 500
+      "amount": 500,
+      "date": "2024-11-17"
     },
     {
       "transaction_id": 1004,
       "buyer_id": 1,
       "seller_id": 2,
       "item_id": 105,
-      "amount": 750
+      "amount": 750,
+      "date": "2024-11-21"
     }
   ],
   "item-administration": [
