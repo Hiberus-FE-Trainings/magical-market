@@ -1,0 +1,196 @@
+{
+  "users": [
+    {
+      "user_id": 1,
+      "name": "Harry Potter",
+      "email": "harry.potter@hogwarts.com",
+      "role": "Buyer",
+      "house": "Gryffindor",
+      "balance": 150,
+      "magic_level": 7
+    },
+    {
+      "user_id": 2,
+      "name": "Draco Malfoy",
+      "email": "draco.malfoy@hogwarts.com",
+      "role": "Seller",
+      "house": "Slytherin",
+      "balance": 200,
+      "magic_level": 6
+    },
+    {
+      "user_id": 3,
+      "name": "Hermione Granger",
+      "email": "hermione.granger@hogwarts.com",
+      "role": "Administrator",
+      "house": "Gryffindor",
+      "balance": 500,
+      "magic_level": 10
+    },
+    {
+      "user_id": 4,
+      "name": "Ron Weasley",
+      "email": "ron.weasley@hogwarts.com",
+      "role": "Buyer",
+      "house": "Gryffindor",
+      "balance": 75,
+      "magic_level": 5
+    },
+    {
+      "user_id": 5,
+      "name": "Severus Snape",
+      "email": "severus.snape@hogwarts.com",
+      "role": "Seller",
+      "house": "Slytherin",
+      "balance": 300,
+      "magic_level": 9
+    },
+    {
+      "user_id": 6,
+      "name": "Minerva McGonagall",
+      "email": "minerva.mcgonagall@hogwarts.com",
+      "role": "Administrator",
+      "house": "Gryffindor",
+      "balance": 600,
+      "magic_level": 10
+    }
+  ],
+  "items": [
+    {
+      "item_id": 101,
+      "name": "Elder Wand",
+      "description": "The most powerful wand in existence.",
+      "category": "Wands",
+      "price": 1000,
+      "approval_status": "Pending",
+      "seller_id": 2
+    },
+    {
+      "item_id": 102,
+      "name": "Polyjuice Potion",
+      "description": "Allows temporary transformation into another person.",
+      "category": "Potions",
+      "price": 300,
+      "approval_status": "Approved",
+      "seller_id": 2
+    },
+    {
+      "item_id": 103,
+      "name": "Advanced Spellbook",
+      "description": "Contains advanced spells for expert wizards.",
+      "category": "Books",
+      "price": 150,
+      "approval_status": "Rejected",
+      "seller_id": 1
+    },
+    {
+      "item_id": 104,
+      "name": "Dragon Egg",
+      "description": "A rare magical creature egg.",
+      "category": "Creatures",
+      "price": 500,
+      "approval_status": "Pending",
+      "seller_id": 5
+    },
+    {
+      "item_id": 105,
+      "name": "Invisibility Cloak",
+      "description": "Grants the wearer complete invisibility.",
+      "category": "Wands",
+      "price": 750,
+      "approval_status": "Approved",
+      "seller_id": 2
+    }
+  ],
+  "transactions": [
+    {
+      "transaction_id": 1001,
+      "buyer_id": 1,
+      "seller_id": 2,
+      "item_id": 102,
+      "amount": 300
+    },
+    {
+      "transaction_id": 1002,
+      "buyer_id": 1,
+      "seller_id": 2,
+      "item_id": 103,
+      "amount": 150
+    },
+    {
+      "transaction_id": 1003,
+      "buyer_id": 4,
+      "seller_id": 5,
+      "item_id": 104,
+      "amount": 500
+    },
+    {
+      "transaction_id": 1004,
+      "buyer_id": 1,
+      "seller_id": 2,
+      "item_id": 105,
+      "amount": 750
+    }
+  ],
+  "item-administration": [
+    {
+      "review_id": 201,
+      "item_id": 101,
+      "admin_id": 3,
+      "status": "Pending",
+      "rejection_reason": null,
+      "review_date": "2024-11-11"
+    },
+    {
+      "review_id": 202,
+      "item_id": 103,
+      "admin_id": 3,
+      "status": "Rejected",
+      "rejection_reason": "Inappropriate content for young wizards.",
+      "review_date": "2024-11-12"
+    },
+    {
+      "review_id": 203,
+      "item_id": 102,
+      "admin_id": 6,
+      "status": "Approved",
+      "rejection_reason": null,
+      "review_date": "2024-11-14"
+    },
+    {
+      "review_id": 204,
+      "item_id": 105,
+      "admin_id": 6,
+      "status": "Approved",
+      "rejection_reason": null,
+      "review_date": "2024-11-18"
+    }
+  ],
+  "categories": [
+    {
+      "category_id": 1,
+      "name": "Wands",
+      "description": "Essential magical items for casting spells."
+    },
+    {
+      "category_id": 2,
+      "name": "Potions",
+      "description": "Magical liquids with various properties."
+    },
+    {
+      "category_id": 3,
+      "name": "Books",
+      "description": "Books with magical knowledge, spells, and more."
+    },
+    {
+      "category_id": 4,
+      "name": "Creatures",
+      "description": "Magical beings available for trade."
+    },
+    {
+      "category_id": 5,
+      "name": "Artifacts",
+      "description": "Rare and powerful magical objects."
+    }
+  ]
+}
