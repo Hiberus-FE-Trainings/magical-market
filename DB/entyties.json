@@ -63,6 +63,7 @@
       "category": "Wands",
       "price": 1000,
       "approval_status": "Pending",
+      "image_url": "images/wands/imperial_grey_and_silver.webp",
       "seller_id": 2
     },
     {
@@ -72,6 +73,7 @@
       "category": "Potions",
       "price": 300,
       "approval_status": "Approved",
+      "image_url": "images/potions/edurus.webp",
       "seller_id": 2
     },
     {
@@ -81,6 +83,7 @@
       "category": "Books",
       "price": 150,
       "approval_status": "Rejected",
+      "image_url": "images/books/generic_book.webp",
       "seller_id": 4
     },
     {
@@ -90,6 +93,7 @@
       "category": "Creatures",
       "price": 500,
       "approval_status": "Pending",
+      "image_url": "images/creatures/graphorn.webp",
       "seller_id": 5
     },
     {
@@ -99,6 +103,7 @@
       "category": "Wands",
       "price": 750,
       "approval_status": "Approved",
+      "image_url": "images/wands/regal_black.webp",
       "seller_id": 2
     }
   ],

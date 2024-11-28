@@ -6,9 +6,6 @@ import {
   ScrollRestoration,
 } from '@remix-run/react'
 import type { LinksFunction } from '@remix-run/node'
-import { ThemeProvider } from '@emotion/react'
-import magicalMarketTheme from './src/themes'
-import { CssBaseline } from '@mui/material'
 
 export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -46,10 +43,5 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return (
-    <ThemeProvider theme={magicalMarketTheme}>
-      <CssBaseline />
-      <Outlet />
-    </ThemeProvider>
-  )
+  return <Outlet />
 }
