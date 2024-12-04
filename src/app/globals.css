@@ -1,42 +1,142 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* Reset CSS */
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Cinzel', serif; /* Tipografía elegante que recuerda a textos antiguos */
+  background-color: #1a1a2e; /* Fondo oscuro mágico */
+  color: #ededed; /* Texto claro y legible */
+  line-height: 1.6;
+}
+
+/* Estilo para Encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #ffd700; /* Color dorado para un toque mágico */
+  text-shadow: 2px 2px 4px #000; /* Efecto encantado */
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+/* Botones mágicos */
+button {
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  border: 2px solid #6b4226;
+  color: #1a1a2e;
+  font-family: 'Cinzel', serif;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff8c00, #ffd700);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo de Inputs */
+input,
+textarea {
+  background-color: #222831;
+  color: #ededed;
+  border: 2px solid #6b4226;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-family: 'Cinzel', serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a5a5a5;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 5px #ffd700;
+}
+
+/* Listas encantadas */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background: rgba(255, 140, 0, 0.1);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Links mágicos */
 a {
-  color: inherit;
+  color: #ffd700;
   text-decoration: none;
+  font-weight: bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+a:hover {
+  text-shadow: 0px 0px 10px #ffd700;
+  color: #ff8c00;
+}
+
+/* Tarjetas de productos */
+.card {
+  background-color: #2e2e3a;
+  border: 2px solid #6b4226;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #ffd700;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #6b4226;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
   }
 }
