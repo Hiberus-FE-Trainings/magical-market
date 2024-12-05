@@ -84,10 +84,21 @@ ul {
 
 li {
   background: rgba(255, 140, 0, 0.1);
+  display: flex;
+  align-items: center;
   margin: 10px 0;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+li:hover {
+  background: rgba(237, 137, 15, 0.303);
+  cursor: pointer;
+}
+
+li:active {
+  background: rgba(237, 137, 15, 0.649);
 }
 
 /* Links mágicos */
@@ -114,6 +125,32 @@ a:hover {
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+/* */
+
+.itemsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: 80vh;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  border-radius: 80px;
+  border: 2px solid #ffd700;
+  margin: 16px 20px;
+}
+
+.itemsList {
+  border-right: 2px solid #ffd700;
+  padding: 16px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.itemList .title {
+  flex-grow: 1;
+  text-align: center;
 }
 
 /* Footer */
