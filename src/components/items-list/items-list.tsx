@@ -23,7 +23,7 @@ export const ItemsList = ({
             >
               {item.image}
             </div>
-            <p style={{ flexGrow: '1', textAlign: 'center' }}>{item.title}</p>
+            <p className="title">{item.title}</p>
           </li>
         ))}
       </ul>

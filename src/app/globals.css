@@ -132,11 +132,11 @@ a:hover {
 .itemsContainer {
   display: grid;
   overflow: hidden;
-
   grid-template-columns: 1fr 1fr;
+  max-height: 80vh;
   gap: 16px;
   height: 100%;
-  padding: 30px;
+  padding: 0px 30px;
   box-sizing: border-box;
   border-radius: 80px;
   border: 2px solid #ffd700;
@@ -147,6 +147,11 @@ a:hover {
   overflow-y: auto;
   border-right: 2px solid #ffd700;
   padding: 16px;
+}
+
+.itemList .title {
+  flex-grow: 1;
+  text-align: center;
 }
 
 /* Footer */

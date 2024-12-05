@@ -26,6 +26,26 @@ const mockedItemsOnList = [
     title: 'Title 5',
     image: <img src="https://example.com/image.jpg" alt="img" />,
   },
+  {
+    title: 'Title 1',
+    image: <img src="https://example.com/image.jpg" alt="img" />,
+  },
+  {
+    title: 'Title 2',
+    image: <img src="https://example.com/image.jpg" alt="img" />,
+  },
+  {
+    title: 'Title 3',
+    image: <img src="https://example.com/image.jpg" alt="img" />,
+  },
+  {
+    title: 'Title 4',
+    image: <img src="https://example.com/image.jpg" alt="img" />,
+  },
+  {
+    title: 'Title 5',
+    image: <img src="https://example.com/image.jpg" alt="img" />,
+  },
 ]
 
 export const ItemsContainer = () => {
@@ -36,8 +56,6 @@ export const ItemsContainer = () => {
   const handleItemTitleClick = (index: number) => {
     setSelectedItem(index)
   }
-
-  console.log(selectedItem)
 
   return (
     <div className="itemsContainer">
