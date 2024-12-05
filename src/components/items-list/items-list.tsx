@@ -1,5 +1,12 @@
 import React from 'react'
 import { ItemsOnList } from '../items-container/items-container'
+import styled from 'styled-components'
+
+const ItemsListStyled = styled.div`
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`
 
 export const ItemsList = ({
   itemsOnList,
@@ -9,7 +16,7 @@ export const ItemsList = ({
   handleItemTitleClick: (index: number) => void
 }) => {
   return (
-    <div className="itemsList">
+    <ItemsListStyled className="itemsList">
       <ul>
         {itemsOnList.map((item, index) => (
           <li key={index} onClick={() => handleItemTitleClick(index)}>
@@ -27,6 +34,6 @@ export const ItemsList = ({
           </li>
         ))}
       </ul>
-    </div>
+    </ItemsListStyled>
   )
 }

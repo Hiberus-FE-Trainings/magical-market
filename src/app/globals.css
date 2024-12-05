@@ -131,11 +131,9 @@ a:hover {
 
 .itemsContainer {
   display: grid;
-  overflow: hidden;
   grid-template-columns: 1fr 1fr;
-  max-height: 80vh;
   gap: 16px;
-  height: 100%;
+  height: 80vh;
   padding: 0px 30px;
   box-sizing: border-box;
   border-radius: 80px;
@@ -144,9 +142,10 @@ a:hover {
 }
 
 .itemsList {
-  overflow-y: auto;
   border-right: 2px solid #ffd700;
   padding: 16px;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .itemList .title {
