@@ -3,6 +3,7 @@
 import { Item } from '@/magical-shop/domain/items'
 import Image from 'next/image'
 import styled from 'styled-components'
+import { generateImageURL } from '../generate-image-url/generate-image-url'
 
 const CardContainer = styled.div`
   padding-top: 3.5rem;
@@ -58,12 +59,17 @@ export const ItemCard = ({
   price,
   title,
   description,
-  seller,
+  sellerName,
 }: ItemCardProps) => {
   return (
     <CardContainer>
       <CardConversion>
-        <Image alt="item-image" src={image} width={200} height={200} />
+        <Image
+          alt="item-image"
+          src={generateImageURL(image)}
+          width={200}
+          height={200}
+        />
         <CardButtonDiv>
           <CardPrice>
             {price}{' '}
@@ -82,7 +88,7 @@ export const ItemCard = ({
       <CardDescription>
         <CardTitleWrapper>
           <CardTitle>{title}</CardTitle>
-          <CardAuthor>{seller}</CardAuthor>
+          <CardAuthor>{sellerName}</CardAuthor>
         </CardTitleWrapper>
         <CardDescriptionText>{description}</CardDescriptionText>
       </CardDescription>

@@ -20,7 +20,7 @@ const ItemsContainerStyled = styled.div`
 `
 
 export const ItemsContainer = ({ items }: { items: Item[] }) => {
-  const [selectedItem, setSelectedItem] = useState<Item | undefined>(undefined)
+  const [selectedItem, setSelectedItem] = useState<Item | undefined>(items[0])
 
   const handleItemTitleClick = (item: Item) => {
     setSelectedItem(item)

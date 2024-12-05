@@ -12,7 +12,7 @@ type ApiItem = {
   seller_name: string
 }
 
-const ITEMS_URL = 'localhost:8001/items/category'
+const ITEMS_URL = 'http://localhost:8001/items/category'
 
 export const getItemsByCategory = async (category: string): Promise<Item[]> => {
   const items = (await fetch(`${ITEMS_URL}/${category}`).then((res) =>

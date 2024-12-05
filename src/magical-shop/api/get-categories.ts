@@ -4,10 +4,10 @@ type ApiCategory = {
   description: string
 }
 
-const CATEGORIES_URL = 'localhost:8003/categories'
+const CATEGORIES_URL = 'http://localhost:8003/categories'
 export const getCategories = async () => {
   const categories = (await fetch(CATEGORIES_URL).then((res) =>
     res.json(),
   )) as ApiCategory[]
-  return categories.map((category) => category.name)
+  return categories.map((category) => category.name.toLowerCase())
 }

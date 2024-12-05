@@ -7,7 +7,7 @@ export const handleAndLoadMagicShopData = async (
   category: string,
 ): Promise<MagicShopProps> => {
   const categories = await getCategories()
-  if (categories.includes(category)) return notFound()
+  if (!categories.includes(category)) return notFound()
 
   const items = await getItemsByCategory(category)
   return { items, categories, categoryFromUrl: category }

@@ -37,7 +37,7 @@ const CategoryTabBar: React.FC<{
   categories: Category[]
 }> = ({ categoryFromURL, categories }) => {
   const activeTab = categories.findIndex(
-    (cat) => cat.name.toLowerCase() === categoryFromURL,
+    (cat) => cat.toLowerCase() === categoryFromURL,
   )
 
   return (
@@ -46,11 +46,9 @@ const CategoryTabBar: React.FC<{
         return (
           <TabBarElement
             className={activeTab === index ? 'active' : ''}
-            key={category.name}
+            key={category}
           >
-            <Link href={`/shop/${category.name.toLowerCase()}`}>
-              {category.name}
-            </Link>
+            <Link href={`/shop/${category.toLowerCase()}`}>{category}</Link>
           </TabBarElement>
         )
       })}
