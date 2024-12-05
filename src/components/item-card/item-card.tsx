@@ -17,33 +17,66 @@ const CardButtonDiv = styled.div`
   margin: 0 10px;
 `
 
-const CardPrice = styled.div`
-  font-size: 1.5rem;
+const CardPrice = styled.p`
+  font-size: 1.7rem;
   margin: 10px 0;
 `
 const CardDescription = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+const CardTitle = styled.h3`
+  font-size: 2rem;
+  margin: 10px 0;
+`
+const CardDescriptionText = styled.p`
+  font-size: 1rem;
+  margin: 10px 0;
 `
 
-export const ItemCard = () => {
+const CardAuthor = styled.h5`
+  font-size: 0.8rem;
+`
+
+export type ItemCardProps = {
+  image: string
+  price: number
+  title: string
+  description: string
+  seller: string
+}
+
+export const ItemCard = ({
+  image,
+  price,
+  title,
+  description,
+  seller,
+}: ItemCardProps) => {
   return (
     <div>
       <CardConversion>
-        <Image
-          alt=""
-          src="https://magical-market-images.s3.eu-central-1.amazonaws.com/images/creatures/phoenix.webp"
-          width={150}
-          height={150}
-        />
+        <Image alt="item-image" src={image} width={150} height={150} />
         <CardButtonDiv>
-          <CardPrice>1000</CardPrice>
+          <CardPrice>
+            {price}{' '}
+            <span>
+              <Image
+                alt="money-bag"
+                src="/money-bag.png"
+                width={20}
+                height={20}
+              />
+            </span>
+          </CardPrice>
           <button>Buy</button>
         </CardButtonDiv>
       </CardConversion>
       <CardDescription>
-        <h3>Phoenix</h3>
-        <p>Magical creature</p>
-        <h5>Albus Dumbledore</h5>
+        <CardTitle>{title}</CardTitle>
+        <CardDescriptionText>{description}</CardDescriptionText>
+        <CardAuthor>{seller}</CardAuthor>
       </CardDescription>
     </div>
   )
