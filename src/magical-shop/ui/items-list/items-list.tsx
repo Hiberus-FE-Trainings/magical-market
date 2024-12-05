@@ -1,8 +1,13 @@
+import { Item } from '@/magical-shop/domain/items'
+import Image from 'next/image'
 import React from 'react'
-import { ItemsOnList } from '../items-container/items-container'
 import styled from 'styled-components'
 
 const ItemsListStyled = styled.div`
+  border-right: 2px solid #ffd700;
+  padding: 16px;
+  overflow-y: auto;
+  height: 100%;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -12,14 +17,14 @@ export const ItemsList = ({
   itemsOnList,
   handleItemTitleClick,
 }: {
-  itemsOnList: ItemsOnList
-  handleItemTitleClick: (index: number) => void
+  itemsOnList: Item[]
+  handleItemTitleClick: (item: Item) => void
 }) => {
   return (
     <ItemsListStyled className="itemsList">
       <ul>
-        {itemsOnList.map((item, index) => (
-          <li key={index} onClick={() => handleItemTitleClick(index)}>
+        {itemsOnList.map((item) => (
+          <li key={item.id} onClick={() => handleItemTitleClick(item)}>
             <div
               style={{
                 height: '50px',
@@ -28,9 +33,11 @@ export const ItemsList = ({
                 margin: '10px',
               }}
             >
-              {item.image}
+              <Image alt="item-image" src={item.image} width={70} height={70} />
             </div>
-            <p className="title">{item.title}</p>
+            <p className="title" style={{ marginLeft: '3rem' }}>
+              {item.title}
+            </p>
           </li>
         ))}
       </ul>

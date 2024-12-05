@@ -1,7 +1,14 @@
 'use client'
 
+import { Item } from '@/magical-shop/domain/items'
 import Image from 'next/image'
 import styled from 'styled-components'
+
+const CardContainer = styled.div`
+  padding-top: 3.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+`
 
 const CardConversion = styled.div`
   display: flex;
@@ -26,6 +33,11 @@ const CardDescription = styled.div`
   flex-direction: column;
   justify-content: center;
 `
+const CardTitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
 const CardTitle = styled.h3`
   font-size: 2rem;
   margin: 10px 0;
@@ -39,13 +51,7 @@ const CardAuthor = styled.h5`
   font-size: 0.8rem;
 `
 
-export type ItemCardProps = {
-  image: string
-  price: number
-  title: string
-  description: string
-  seller: string
-}
+export type ItemCardProps = Item
 
 export const ItemCard = ({
   image,
@@ -55,9 +61,9 @@ export const ItemCard = ({
   seller,
 }: ItemCardProps) => {
   return (
-    <div>
+    <CardContainer>
       <CardConversion>
-        <Image alt="item-image" src={image} width={150} height={150} />
+        <Image alt="item-image" src={image} width={200} height={200} />
         <CardButtonDiv>
           <CardPrice>
             {price}{' '}
@@ -74,10 +80,12 @@ export const ItemCard = ({
         </CardButtonDiv>
       </CardConversion>
       <CardDescription>
-        <CardTitle>{title}</CardTitle>
+        <CardTitleWrapper>
+          <CardTitle>{title}</CardTitle>
+          <CardAuthor>{seller}</CardAuthor>
+        </CardTitleWrapper>
         <CardDescriptionText>{description}</CardDescriptionText>
-        <CardAuthor>{seller}</CardAuthor>
       </CardDescription>
-    </div>
+    </CardContainer>
   )
 }

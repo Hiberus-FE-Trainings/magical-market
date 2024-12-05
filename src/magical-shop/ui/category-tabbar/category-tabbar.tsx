@@ -1,16 +1,9 @@
 'use client'
 
+import { Category } from '@/magical-shop/domain/catergory'
 import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
-
-const categories = [
-  { id: 1, name: 'Wands', description: '/shop/wands' },
-  { id: 2, name: 'Potions', description: '/shop/potions' },
-  { id: 3, name: 'Books', description: '/shop/books' },
-  { id: 4, name: 'Brooms', description: '/shop/brooms' },
-  { id: 5, name: 'Robes', description: '/shop/robes' },
-]
 
 const TabBar = styled.ul`
   display: flex;
@@ -39,9 +32,10 @@ const TabBarElement = styled.li`
   }
 `
 
-const CategoryTabBar: React.FC<{ categoryFromURL: string }> = ({
-  categoryFromURL,
-}) => {
+const CategoryTabBar: React.FC<{
+  categoryFromURL: string
+  categories: Category[]
+}> = ({ categoryFromURL, categories }) => {
   const activeTab = categories.findIndex(
     (cat) => cat.name.toLowerCase() === categoryFromURL,
   )
@@ -52,7 +46,7 @@ const CategoryTabBar: React.FC<{ categoryFromURL: string }> = ({
         return (
           <TabBarElement
             className={activeTab === index ? 'active' : ''}
-            key={category.id}
+            key={category.name}
           >
             <Link href={`/shop/${category.name.toLowerCase()}`}>
               {category.name}

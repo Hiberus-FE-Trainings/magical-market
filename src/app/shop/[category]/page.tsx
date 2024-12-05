@@ -1,22 +1,14 @@
-import CategoryTabBar from '@/components/category-tabbar/category-tabbar'
-import { ItemsContainer } from '@/components/items-container/items-container'
+import MagicShopWrapper from '@/magical-shop/ui/magic-shop.wrapper'
+import { handleAndLoadMagicShopData } from '@/magical-shop/ui/wiring/handle-and-load-magic-shop-data'
 
-export default function MagicShop({
+export default async function MagicShopRSC({
   params,
 }: {
   params: { category: string }
 }) {
   const { category } = params
 
-  return (
-    <div style={{ textAlign: 'center' }}>
-      <h1>🪄 Diagon Alley Magic Market</h1>
-      <p>
-        Welcome to the Magic Market, where youll find the most fascinating items
-        for witches, wizards, and all lovers of magic.
-      </p>
-      <ItemsContainer />
-      <CategoryTabBar categoryFromURL={category} />
-    </div>
-  )
+  const data = handleAndLoadMagicShopData(category)
+
+  return <MagicShopWrapper {...data} categoryFromUrl={category} />
 }
