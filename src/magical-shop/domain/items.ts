@@ -4,5 +4,6 @@ export type Item = {
   price: number
   title: string
   description: string
-  seller: string
+  sellerId: number
+  sellerName: string
 }

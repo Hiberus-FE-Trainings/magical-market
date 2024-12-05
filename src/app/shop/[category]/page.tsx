@@ -8,7 +8,7 @@ export default async function MagicShopRSC({
 }) {
   const { category } = params
 
-  const data = handleAndLoadMagicShopData(category)
+  const data = await handleAndLoadMagicShopData(category)
 
   return <MagicShopWrapper {...data} categoryFromUrl={category} />
 }
